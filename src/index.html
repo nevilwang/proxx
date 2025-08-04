@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROXX - A game of proximity</title>
+  <style>
+    html {
+      touch-action: manipulation;
+      background-color: #000;
+      font-family: "Space Mono", monospace;
+      font-size: 0.8em;
+      font-variant-ligatures: none;
+      --cell-size: 25px;
+      --cell-padding: 2px;
+      --side-margin: 10px;
+      --icon-size: 20px;
+      --circlebtn-size: 24px;
+      --bar-avoid: 40px;
+      --bar-padding: 5px;
+      --border-radius: 7px;
+    }
+    
+    @media (min-width: 320px) {
+      html {
+        font-size: 1em;
+        --cell-size: 40px;
+        --cell-padding: 5px;
+        --side-margin: 24px;
+        --icon-size: 24px;
+        --circlebtn-size: 48px;
+        --bar-avoid: 78px;
+        --bar-padding: 18px;
+      }
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overscroll-behavior: none;
+      color: #fff;
+    }
+
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .app {
+      height: 100%;
+      display: flex;
+      flex-flow: column;
+      background: linear-gradient(to bottom, rgb(54, 49, 176), rgb(14, 16, 62));
+    }
+
+    .loading {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="loading">Loading PROXX...</div>
+  </div>
+  <script type="module" src="/main/bootstrap.tsx"></script>
+</body>
+</html>
